@@ -35,7 +35,7 @@ enum ACCENTTYPES {
 Napi::Value SetAcrylic(Napi::Env env, HWND hwnd, int tint, bool state) {
 	Napi::Value result = Napi::Boolean::New(env, false);
 
-	if (IsWindowsXPSP1OrGreater()) {
+	if (IsWindows10OrGreater()) {
 		const HINSTANCE hModule = LoadLibrary(TEXT("user32.dll"));
 		if (hModule)
 		{
