@@ -1,0 +1,33 @@
+{
+  "name": "electron-acrylic",
+  "version": "0.0.1",
+  "description": "Achieve acrylic background in your Electron application.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "conf": "node-gyp configure",
+    "build": "npm run conf && node-gyp build --target=2.0.0 --runtime=electron --arch=x64 --dist-url=https://atom.io/download/atom-shell",
+    "rebuild": "node-gyp rebuild --target=2.0.0 --runtime=electron --arch=x64 --dist-url=https://atom.io/download/atom-shell",
+    "b:64": "node-gyp rebuild --target=2.0.0 --runtime=electron --arch=x64 --dist-url=https://atom.io/download/atom-shell",
+    "b:86": "node-gyp rebuild --target=2.0.0 --runtime=electron --arch=x86 --dist-url=https://atom.io/download/atom-shell"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/23phy/electron-acrylic.git"
+  },
+  "keywords": [
+    "Electron",
+    "Acrylic"
+  ],
+  "author": "23phy (https://github.com/23phy)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/23phy/electron-acrylic/issues"
+  },
+  "homepage": "https://github.com/23phy/electron-acrylic#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "node-addon-api": "^1.3.0",
+    "node-gyp": "^3.6.2"
+  }
+}
