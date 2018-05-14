@@ -12,7 +12,7 @@ app.on('ready', () => {
     });
 
     mainWindow.loadURL('file://' + __dirname + '/index.html');
-    mainWindow.openDevTools({ detach: true });
+    mainWindow.webContents.openDevTools({mode: 'detach'})
     console.log(mainWindow.getNativeWindowHandle());
 
     ElectronAcrylic.SetAcrylic(mainWindow.getNativeWindowHandle(), 0xFFFFFF, true);
