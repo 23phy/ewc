@@ -2,9 +2,6 @@
 #include <dwmapi.h>
 #include <VersionHelpers.h>
 
-#include <iostream>
-#include <fstream>
-
 struct ACCENTPOLICY
 {
 	int nAccentState;
@@ -35,17 +32,15 @@ enum ACCENTTYPES {
 Napi::Value SetAcrylic(Napi::Env env, HWND hwnd, int tint, bool state) {
 	Napi::Value result = Napi::Boolean::New(env, false);
 
-	if (IsWindows10OrGreater()) {
+	if (IsWindows10OrGreater() && state) {
 		const HINSTANCE hModule = LoadLibrary(TEXT("user32.dll"));
-		if (hModule)
-		{
+		if (hModule) {
 			typedef BOOL(WINAPI* pSetWindowCompositionAttribute)(HWND, WINCOMATTRPDATA*);
 			const pSetWindowCompositionAttribute SetWindowCompositionAttribute = (pSetWindowCompositionAttribute)GetProcAddress(hModule, "SetWindowCompositionAttribute");
-			if (SetWindowCompositionAttribute)
-			{
+			if (SetWindowCompositionAttribute) {
 				ACCENTPOLICY policy;
 				policy.nAccentState = ACCENT_ENABLE_ACRYLICBLURBEHIND;
-				policy.nColor = 0x808080;
+				policy.nColor = tint;
 
 
 				WINCOMATTRPDATA data;
@@ -72,30 +67,20 @@ Napi::Value Acrylic(const Napi::CallbackInfo& info) {
 	}
 
 	if (!info[0].IsObject() || !info[1].IsNumber() || !info[2].IsBoolean()) {
-		Napi::TypeError::New(env, "Bad arguments placement.").ThrowAsJavaScriptException();
+		Napi::TypeError::New(env, "Bad arguments.").ThrowAsJavaScriptException();
 		return env.Null();
 	}
 
-	auto tint = info[1].As<Napi::Number>().Int32Value();
-	std::cout << "TINT: " << tint << std::endl;
-	auto state = info[2].As<Napi::Boolean>().ToBoolean();
-	std::cout << "STATE: " << state << std::endl;
+	// Window handler, first parameter of the function SetAcrylic
+	Napi::Uint32Array windowHandler = info[0].As<Napi::Uint32Array>();
 
-	auto ab = info[0].As<Napi::Object>();
+	// The tint color as hexadecimal, the second parameter
+	int32_t tint = info[1].As<Napi::Number>().Int32Value();
 
-	std::cout << "ab: " << ab.ToString() << std::endl;
+	Napi::Boolean state = info[2].As<Napi::Boolean>().ToBoolean();
 
-	// TODO: arraybuffer to unsigned char*
-	// unsigned char* windowHandleBuffer = reinterpret_cast<unsigned char*>(ab.Data());
-	// std::cout << "The windowHandleBuffer" << windowHandleBuffer << std::endl;
-	auto abc = info[0].As<Napi::ArrayBuffer>();
-
-
-	uint32_t handle = *reinterpret_cast<uint32_t*>((unsigned char*)abc.Data());
+	uint32_t handle = *windowHandler.Data();
 	HWND hwnd = (HWND)handle;
-	std::cout << "HWND: " << hwnd;
-
-	
 
 	return SetAcrylic(env, hwnd, tint, state);
 }

@@ -7,7 +7,8 @@ app.on('ready', () => {
     mainWindow = new BrowserWindow({
         height: 500,
         width: 800,
-        frame: false
+        frame: false,
+        transparent: true
     });
 
     mainWindow.loadURL('file://' + __dirname + '/index.html');
@@ -18,7 +19,6 @@ app.on('ready', () => {
 
     console.log(buffer, buffer.length)
 
-    console.log();
     ElectronAcrylic.SetAcrylic(mainWindow.getNativeWindowHandle(), 0x909090, true);
 });
 
