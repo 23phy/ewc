@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Electron Acrylic</title>
+    <link rel="stylesheet" href="node_modules/xel/themes/vanilla.css">
     <style>
         :root {
             --color: rgba(80, 0, 80, 0.45);
@@ -25,7 +26,7 @@
             top: 30px;
             width: 100%;
             height: calc(100% - 30px);
-            background: rgba(80, 0, 80, 0.3);
+            background: var(--color);
         }
         .button {
             width: 24px;
@@ -37,7 +38,8 @@
             border-radius: 2px;
         }
         .button svg {
-            fill: var(--color);
+            fill: black;
+            transform: translate(15%, 15%);
         }
         .button:hover {
             background-color: rgba(80, 0, 80, 0.255);
@@ -48,12 +50,18 @@
             top: 50%;
             transform: translateY(-50%);
         }
+        x-colorselect {
+            top: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
     </style>
+
 </head>
 <body>
     <div class="titleBar">
         <div class="button" id="close">
-            <svg viewBox="0 0 25 25" version="1.1">
+            <svg viewBox="0 0 35 35" version="1.1">
                 <path d="M19.1,2.7c-0.5,0-1,0.2-1.4,0.6L4.3,16.7c-0.8,0.8-0.8,2,0,2.8l0.2,0.2c0.4,0.4,0.9,0.6,1.4,0.6s1-0.2,1.4-0.6L20.7,6.3    c0.8-0.8,0.8-2,0-2.8l-0.2-0.2C20.2,2.9,19.6,2.7,19.1,2.7L19.1,2.7z"/>
                 <path d="M5.9,2.7c-0.5,0-1,0.2-1.4,0.6L4.3,3.5c-0.8,0.8-0.8,2,0,2.8l13.4,13.4c0.4,0.4,0.9,0.6,1.4,0.6s1-0.2,1.4-0.6l0.2-0.2    c0.8-0.8,0.8-2,0-2.8L7.3,3.3C6.9,2.9,6.4,2.7,5.9,2.7L5.9,2.7z"/>
             </svg>
@@ -61,7 +69,13 @@
     </div>
     <div class="content">
         <p>This window should have an acrylic background.</p>
+        <x-colorselect value="#bada55">
+            <x-popover modal>
+                <x-wheelcolorpicker alphaslider value="#808080"></x-wheelcolorpicker>
+            </x-popover>
+        </x-colorselect>
     </div>
     <script src="app.js"></script>
+    <script src="node_modules/xel/xel.min.js"></script>
 </body>
 </html>

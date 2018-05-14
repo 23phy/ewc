@@ -7,3 +7,9 @@ let closeButton = document.querySelector('.button').addEventListener('click', (e
 ipcRenderer.on('closeAppReply', (event, args) => {
     console.log(args);
 })
+
+let color = document.querySelector('x-colorselect');
+
+color.addEventListener('change', (_) => {
+	document.querySelector('.content').style.backgroundColor = color.value;
+});
