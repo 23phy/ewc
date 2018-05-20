@@ -6,8 +6,16 @@
 Achieve this natively in Electron on Windows 10 version 1803 and up:
 ![Acrylic Background][image]
 
-## The module is out, you can install it and `require()` it from your electron app.
-`npm i electron-acrylic`
+## How to use it
+- Install it from npm
+  `npm i electron-acrylic`
+- Download this repo and follow these steps:
+  - copy this repo in your `node_modules`
+  - cd into the folder `electron-acrylic`
+  - take note of your electron version `electron -v` and make sure it matches the one in `package.json` scripts
+  - run `npm i` to install the dependencies
+  - add it to your dependencies as `"electron-acrylic": "0.0.4"'`
+  - follow the example below
 
 
 ## API
@@ -41,7 +49,7 @@ app.on('ready', () => {
 ```
 ### Here you can use the shortcuts `Ctrl+A/D` to enable or disable the acrylic effect.
 
-## Note
+## Notes
 - `removeAcrylic(window)` has no effect right now, this is a WIP.
 
 ## Known Issues
@@ -55,4 +63,7 @@ These can be "fixed" by restarting the app.
 
 ## License
 
-See [LICENSE](LICENSE).
+This project is licensed under MIT, for more info see [LICENSE](LICENSE).
+
+## Misc
+Sorry, I'm a n00b with all those commits and patches 😂

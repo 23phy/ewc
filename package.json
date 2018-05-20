@@ -10,7 +10,6 @@
     "build": "npm run conf && node-gyp build --target=2.0.0 --runtime=electron --arch=x64 --dist-url=https://atom.io/download/atom-shell",
     "rebuild": "node-gyp rebuild --target=2.0.0 --runtime=electron --arch=x64 --dist-url=https://atom.io/download/atom-shell",
     "b:64": "node-gyp rebuild --target=2.0.0 --runtime=electron --arch=x64 --dist-url=https://atom.io/download/atom-shell",
-    "b:86": "node-gyp rebuild --target=2.0.0 --runtime=electron --arch=x86 --dist-url=https://atom.io/download/atom-shell",
     "postinstall": "npm run rebuild"
   },
   "repository": {
