@@ -1,6 +1,6 @@
 {
   "name": "electron-acrylic",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "Achieve acrylic background in your Electron application.",
   "main": "index.js",
   "scripts": {
@@ -30,9 +30,7 @@
   },
   "homepage": "https://github.com/23phy/electron-acrylic#readme",
   "dependencies": {
-    "bindings": "^1.3.0"
-  },
-  "devDependencies": {
+    "bindings": "^1.3.0",
     "node-addon-api": "^1.3.0",
     "node-gyp": "^3.6.2"
   }
