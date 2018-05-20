@@ -1,5 +1,5 @@
 const {app, BrowserWindow, ipcMain } = require('electron');
-const ElectronAcrylic = require('../build/Release/ElectronAcrylic.node')
+const electronAcrylic = require(__dirname + '../../')
 
 let mainWindow;
 
@@ -8,17 +8,15 @@ app.on('ready', () => {
         height: 500,
         width: 800,
         transparent: true,
-        frame: false
+        frame: true,
     });
 
     mainWindow.loadURL('file://' + __dirname + '/index.html');
-    mainWindow.webContents.openDevTools({mode: 'detach'})
-    console.log(mainWindow.getNativeWindowHandle());
+    // mainWindow.webContents.openDevTools({mode: 'detach'})
 
-    ElectronAcrylic.SetAcrylic(mainWindow.getNativeWindowHandle(), 0xFFFFFF, true);
+    electronAcrylic.setAcrylic(mainWindow, 0xFFFFFF);
 });
 
 ipcMain.on('closeApp', (event, args) => {
     app.quit();
-    event.sender.send('closeAppReply', args);
 })

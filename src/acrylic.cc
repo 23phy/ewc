@@ -32,7 +32,7 @@ enum ACCENTTYPES {
 Napi::Value SetAcrylic(Napi::Env env, HWND hwnd, int tint, bool state) {
 	Napi::Value result = Napi::Boolean::New(env, false);
 
-	if (IsWindows10OrGreater() && state) {
+	if (IsWindowsVersionOrGreater(10, 0, 0) && state) {
 		const HINSTANCE hModule = LoadLibrary(TEXT("user32.dll"));
 		if (hModule) {
 			typedef BOOL(WINAPI* pSetWindowCompositionAttribute)(HWND, WINCOMATTRPDATA*);

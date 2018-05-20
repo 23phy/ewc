@@ -2,9 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Electron Acrylic</title>
-    <link rel="stylesheet" href="./node_modules/xel/themes/vanilla.css">
     <style>
         :root {
             --color: rgba(80, 0, 80, 0.45);
@@ -51,11 +49,6 @@
             top: 50%;
             transform: translateY(-50%);
         }
-        x-colorselect {
-            top: 20%;
-            left: 50%;
-            transform: translateX(-50%);
-        }
     </style>
 
 </head>
@@ -70,13 +63,7 @@
     </div>
     <div class="content">
         <p>This window should have an acrylic background.</p>
-        <x-colorselect value="#bada55">
-            <x-popover modal>
-                <x-wheelcolorpicker alphaslider value="#808080"></x-wheelcolorpicker>
-            </x-popover>
-        </x-colorselect>
     </div>
     <script src="app.js"></script>
-    <script src="node_modules/xel/xel.min.js"></script>
 </body>
 </html>
