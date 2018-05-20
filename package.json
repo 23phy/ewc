@@ -1,6 +1,6 @@
 {
   "name": "electron-acrylic",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Achieve acrylic background in your Electron application.",
   "main": "index.js",
   "scripts": {
