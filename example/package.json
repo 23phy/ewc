@@ -9,10 +9,7 @@
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "electron": "^2.0.0"
-  },
   "dependencies": {
-    "xel": "0.0.136"
+    "electron": "^2.0.0"
   }
 }
