@@ -16,11 +16,10 @@
   - add it to your dependencies as `"electron-acrylic": "0.0.4"'`
   - follow the example below
 
-#
 ## API
 - `setAcrylic(window, tint)` - Applies the acrylic background to the window.
 - `removeAcrylic(window)` - Removes the acrylic background of the window.
-#
+
 ## Example: 
 ```javascript
 const { app, BrowserWindow } = require('electron');
@@ -47,13 +46,11 @@ app.on('ready', () => {
 });
 ```
 Here you can use the shortcuts `Ctrl+A/D` to enable or disable the acrylic effect.
-#
+
 ## Notes
 - `removeAcrylic(window)` has no effect right now, this is a WIP.
 
-#
 ## Known Issues
-
 I encourage you to look here before opening an issue.
 - When hoverig over the `X` button in the example app, top right corner, sometimes half of the window, horizontally, gets the `:hover` effect. Don't know why.
 - Sometimes this happens too
@@ -61,11 +58,8 @@ I encourage you to look here before opening an issue.
 
 These can be "fixed" by restarting the app.
 
-#
 ## License
-
 This project is licensed under MIT, for more info see [LICENSE](LICENSE).
 
-#
 ## Misc
 Sorry, I'm a n00b with all those commits and patches 😂
