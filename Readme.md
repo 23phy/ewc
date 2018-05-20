@@ -4,7 +4,6 @@
 ## Achieve this natively in Electron on Windows 10 version 1803 and up:
 ![Acrylic Background][image]
 
-#
 ## How to use it
 - Install it from npm
   `npm i electron-acrylic`
