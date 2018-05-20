@@ -1,11 +1,10 @@
-## Stay tuned.
-
 [image]: /images/acrylic.png "Acrylic Image"
 [windowBug]: /images/windowBug.png "Window Bug"
 
-Achieve this natively in Electron on Windows 10 version 1803 and up:
+## Achieve this natively in Electron on Windows 10 version 1803 and up:
 ![Acrylic Background][image]
 
+#
 ## How to use it
 - Install it from npm
   `npm i electron-acrylic`
@@ -17,11 +16,11 @@ Achieve this natively in Electron on Windows 10 version 1803 and up:
   - add it to your dependencies as `"electron-acrylic": "0.0.4"'`
   - follow the example below
 
-
+#
 ## API
-### `setAcrylic(window, tint)` - Applies the acrylic background to the window.
-### `removeAcrylic(window)` - Removes the acrylic background of the window.
-
+- `setAcrylic(window, tint)` - Applies the acrylic background to the window.
+- `removeAcrylic(window)` - Removes the acrylic background of the window.
+#
 ## Example: 
 ```javascript
 const { app, BrowserWindow } = require('electron');
@@ -47,23 +46,26 @@ app.on('ready', () => {
     })
 });
 ```
-### Here you can use the shortcuts `Ctrl+A/D` to enable or disable the acrylic effect.
-
+Here you can use the shortcuts `Ctrl+A/D` to enable or disable the acrylic effect.
+#
 ## Notes
 - `removeAcrylic(window)` has no effect right now, this is a WIP.
 
+#
 ## Known Issues
-### I encourage you to look here before opening an inssue.
 
+I encourage you to look here before opening an issue.
 - When hoverig over the `X` button in the example app, top right corner, sometimes half of the window, horizontally, gets the `:hover` effect. Don't know why.
 - Sometimes this happens too
   ![Window Bug][windowBug]
 
 These can be "fixed" by restarting the app.
 
+#
 ## License
 
 This project is licensed under MIT, for more info see [LICENSE](LICENSE).
 
+#
 ## Misc
 Sorry, I'm a n00b with all those commits and patches 😂
