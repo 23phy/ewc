@@ -52,3 +52,7 @@ app.on('ready', () => {
   ![Window Bug][windowBug]
 
 These can be "fixed" by restarting the app.
+
+## License
+
+See [LICENSE](LICENSE).
