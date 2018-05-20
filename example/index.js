@@ -8,7 +8,7 @@ app.on('ready', () => {
         height: 500,
         width: 800,
         transparent: true,
-        frame: true,
+        frame: false,
     });
 
     mainWindow.loadURL('file://' + __dirname + '/index.html');

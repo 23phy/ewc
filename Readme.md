@@ -1,9 +1,14 @@
 ## Stay tuned.
 
 [image]: /images/acrylic.png "Acrylic Image"
+[windowBug]: /images/windowBug.png "Window Bug"
 
 Achieve this natively in Electron on Windows 10 version 1803 and up:
 ![Acrylic Background][image]
+
+## The module is out, you can install it and `require()` it from your electron app.
+`npm i electron-acrylic`
+
 
 ## API
 ### `setAcrylic(window, tint)` - Applies the acrylic background to the window.
@@ -38,3 +43,12 @@ app.on('ready', () => {
 
 ## Note
 - `removeAcrylic(window)` has no effect right now, this is a WIP.
+
+## Known Issues
+### I encourage you to look here before opening an inssue.
+
+- When hoverig over the `X` button in the example app, top right corner, sometimes half of the window, horizontally, gets the `:hover` effect. Don't know why.
+- Sometimes this happens too
+  ![Window Bug][windowBug]
+
+These can be "fixed" by restarting the app.
