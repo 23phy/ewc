@@ -19,7 +19,9 @@
   },
   "keywords": [
     "Electron",
-    "Acrylic"
+    "Acrylic",
+    "Blur",
+    "Transparent"
   ],
   "author": "23phy (https://github.com/23phy)",
   "license": "MIT",
