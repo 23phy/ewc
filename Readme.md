@@ -35,3 +35,6 @@ app.on('ready', () => {
 });
 ```
 ### Here you can use the shortcuts `Ctrl+A/D` to enable or disable the acrylic effect.
+
+## Note
+- `removeAcrylic(window)` has no effect right now, this is a WIP.
