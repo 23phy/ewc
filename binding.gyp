@@ -1,9 +1,10 @@
 {
   "targets": [
     {
-      "target_name": "ElectronAcrylic",
+      "target_name": "ewc",
       "sources": [
-        "src/acrylic.cc"
+        "./src/ewc.cpp",
+        "./src/swca.cpp"
       ],
       "include_dirs": [
         "<!@(node -p \"require('node-addon-api').include\")"

@@ -1,18 +1,21 @@
-const electronAcrylic = require('bindings')('ElectronAcrylic');
+"use strict";
 
-module.exports = electronAcrylic;
-
-function SetAcrylic(window, tint) {
-    return electronAcrylic.SetAcrylic(window.getNativeWindowHandle(), tint, true)
-}
-
-function RemoveAcrylic(window) {
-    return electronAcrylic.SetAcrylic(window.getNativeWindowHandle(), 0xFFFFFF, false);
-}
+const ewc = require('bindings')('ewc');
 
 module.exports = {
+	disable: (window) => {
+		return ewc.setComposition(window.getNativeWindowHandle(), 0, 0xFFFFFFFF);
+	},
+	setGradient: (window, tint) => {
+		return ewc.setComposition(window.getNativeWindowHandle(), 1, tint);
+	},
+	setTransparentGradient: (window, tint) => {
+		return ewc.setComposition(window.getNativeWindowHandle(), 2, tint);
+	},
+	setBlurBehind: (window, tint) => {
+		return ewc.setComposition(window.getNativeWindowHandle(), 3, tint);
+	},
     setAcrylic: (window, tint) => {
-        return SetAcrylic(window, tint);   
-    },
-    removeAcrylic: (window) => RemoveAcrylic(window)
+        return ewc.setComposition(window.getNativeWindowHandle(), 4, tint);   
+    }
 }

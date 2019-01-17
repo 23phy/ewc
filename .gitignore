@@ -15,8 +15,10 @@ build
 
 # Dependency directories
 node_modules/
+example/node_modules/
 
 # Optional npm cache directory
 .npm
 
 example/dist
+.vscode/
