@@ -1,13 +1,13 @@
-`use strict`;
+'use strict';
 
-const ewc = require(`bindings`)(`ewc`);
+const ewc = require('bindings')('ewc');
 
 const SWCA = (window, accent, tint) => {
 	window = window.getNativeWindowHandle();
 	if (!window instanceof Buffer) {
 		throw new Error(`The 'window' argument is not a native window handler.`);
 	}
-	if(typeof tint != `number`) {
+	if(typeof tint != 'number') {
 		throw new Errow(`The 'tint' argument is not a number.`);
 	}
 	return ewc.setComposition(window, accent, tint);
