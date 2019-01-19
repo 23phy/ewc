@@ -31,6 +31,7 @@
   },
   "homepage": "https://github.com/23phy/ewc#readme",
   "dependencies": {
+    "@types/electron": "^1.6.10",
     "bindings": "^1.3.1",
     "node-addon-api": "^1.6.2"
   },
