@@ -15,12 +15,7 @@ const SWCA = (window, accent, tint) => {
 
 module.exports = {
 	disable: (window) => {
-		window = window.getNativeWindowHandle();
-		if (window instanceof Buffer) {
-			return ewc.setComposition(window, 0, 0x00000000);
-		} else {
-			throw new Error(`The 'window' argument is not a native window handler.`)
-		}
+		return SWCA(window, 0, 0x00000000);
 	},
 	setGradient: (window, tint) => {
 		return SWCA(window, 1, tint);
