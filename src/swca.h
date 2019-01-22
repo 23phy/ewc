@@ -21,7 +21,7 @@ enum WINCOMPATTR {
 
 namespace swca {
     typedef BOOL(WINAPI* pSWCA)(HWND, WINCOMATTRPDATA*);
-    static pSWCA SWCA = (pSWCA)GetProcAddress(GetModuleHandle(TEXT("user32.dll")), "SetWindowCompositionAttribute");
+    static pSWCA SWCA = (pSWCA)GetProcAddress(GetModuleHandleW(L"user32"), "SetWindowCompositionAttribute");
 
     Napi::Value setComposition(const Napi::CallbackInfo& info);
     Napi::Object Init(Napi::Env env, Napi::Object exports);
