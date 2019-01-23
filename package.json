@@ -8,7 +8,7 @@
     "preinstall": "echo This is a work in progress. There may/will be bugs. You can open an issue at https://github.com/23phy/ewc/issues'",
     "clean": "node-gyp clean",
     "conf": "node-gyp configure",
-    "build": "node-gyp build --target=4.0.1 --runtime=electron --arch=x64 --dist-url=https://atom.io/download/atom-shell",
+    "build": "node-gyp build --target=4.0.1 --runtime=electron --arch=ia32 --dist-url=https://atom.io/download/atom-shell",
     "rebuild": "npm run clean && npm run conf && npm run build",
     "postinstall": "npm run rebuild"
   },

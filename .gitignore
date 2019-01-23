@@ -15,10 +15,12 @@ build
 
 # Dependency directories
 node_modules/
-example/node_modules/
+example/electron/node_modules/
+example/electron-vue/node_modules/
 
 # Optional npm cache directory
 .npm
 
-example/dist
+example/electron/dist
+example/electron-vue/dist_electron
 .vscode/

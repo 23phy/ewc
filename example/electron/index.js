@@ -1,5 +1,5 @@
 const {app, BrowserWindow, ipcMain } = require('electron');
-const ewc = require(`${__dirname}../../`);
+const ewc = require(`${__dirname}../../../`);
 
 let mainWindow;
 app.on('ready', () => {
