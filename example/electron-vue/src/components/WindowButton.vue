@@ -1,29 +1,23 @@
 <template>
-  <div class="button" id="min-button" @click="store.dispatch(action)">
-    <span ref="text"></span>
+  <div class="button" @click="this.dispatchAction">
+    <span v-html="text"></span>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
-import { mapActions } from 'vuex';
-import store from '@/store';
 
 export default Vue.extend({
   name: "WindowButton",
-  data() {
-    return {
-      store: store,
-    }
-  },
   props: {
     text: { required: true },
     action: { required: true },
   },
-  mounted() {
-    //@ts-ignore
-    this.$refs.text.innerHTML = this.text;
-  },
+  methods: {
+    dispatchAction() {
+      this.$store.dispatch(this.action)
+    }
+  }
 });
 </script>
 
