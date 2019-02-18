@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="02750e56-b527-4a89-90af-de4d7126f610" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.vscode/launch.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/electron-vue/src/components/WindowButton.vue" beforeDir="false" afterPath="$PROJECT_DIR$/example/electron-vue/src/components/WindowButton.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -118,15 +116,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1550402452000</updated>
-      <workItem from="1550402453154" duration="540000" />
+      <workItem from="1550402453154" duration="1136000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="540000" />
+    <option name="totallyTimeSpent" value="1136000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="502" y="0" width="1425" height="1057" extended-state="0" />
+    <frame x="502" y="0" width="1425" height="1057" extended-state="1" />
     <layout>
       <window_info id="npm" sideWeight="0.3951613" side_tool="true" visible="true" weight="0.15356885" />
       <window_info id="Favorites" side_tool="true" />
