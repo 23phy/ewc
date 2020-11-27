@@ -9,6 +9,9 @@ app.on('ready', () => {
         backgroundColor: '#00000000',
         frame: false,
         show: false,
+        webPreferences: {
+            nodeIntegration: true
+        },
     });
 
     mainWindow.loadURL(`file://${__dirname}/index.html`);
